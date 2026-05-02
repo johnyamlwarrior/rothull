@@ -507,8 +507,8 @@
     ShipHull: 13000
 
 - type: latheRecipe
-  id: SunderLPC
-  result: ShipVoucherSunder
+  id: ListerLPC
+  result: ShipVoucherLister
   completetime: 1
   materials:
     StarshipEngineComponents: 5000
