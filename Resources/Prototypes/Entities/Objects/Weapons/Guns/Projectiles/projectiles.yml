@@ -56,6 +56,9 @@
   abstract: true
   components:
   - type: ProjectilePhasePrevent
+    mask:
+    - Impassable
+    - BulletImpassable
   - type: Reflective
   - type: Clickable
   - type: Sprite

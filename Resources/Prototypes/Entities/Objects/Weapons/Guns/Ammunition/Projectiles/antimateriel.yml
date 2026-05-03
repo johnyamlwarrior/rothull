@@ -5,6 +5,9 @@
   name: bullet (15.2×169mm)
   components:
   - type: ProjectilePhasePrevent
+    mask:
+    - Impassable
+    - BulletImpassable
   - type: Projectile
     damage:
       types:
@@ -20,6 +23,9 @@
   name: bullet (15.2×169mm AP-DU)
   components:
   - type: ProjectilePhasePrevent
+    mask:
+    - Impassable
+    - BulletImpassable
   - type: Projectile
     damage:
       types:
@@ -35,6 +41,9 @@
   name: bullet (15.2×169mm incendiary)
   components:
   - type: ProjectilePhasePrevent
+    mask:
+    - Impassable
+    - BulletImpassable
   - type: Projectile
     damage:
       types:
@@ -54,6 +63,9 @@
   parent: BaseBullet
   components:
   - type: ProjectilePhasePrevent
+    mask:
+    - Impassable
+    - BulletImpassable
   - type: Projectile
     damage:
       types:

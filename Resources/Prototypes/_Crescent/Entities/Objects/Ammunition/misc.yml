@@ -33,6 +33,9 @@
   - type: Ammo
     muzzleFlash: null
   - type: ProjectilePhasePrevent
+    mask:
+    - Impassable
+    - BulletImpassable
   - type: Projectile
     impactEffect: BulletImpactEffectFlamer
     damage:
@@ -71,6 +74,9 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: ProjectilePhasePrevent
+      mask:
+    - Impassable
+    - BulletImpassable
     - type: Projectile
       damage:
         types:
@@ -89,6 +95,9 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: ProjectilePhasePrevent
+      mask:
+    - Impassable
+    - BulletImpassable
     - type: Projectile
       damage:
         types:
