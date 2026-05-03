@@ -75,8 +75,8 @@
   components:
     - type: ProjectilePhasePrevent
       mask:
-    - Impassable
-    - BulletImpassable
+      - Impassable
+      - BulletImpassable
     - type: Projectile
       damage:
         types:
@@ -96,8 +96,8 @@
   components:
     - type: ProjectilePhasePrevent
       mask:
-    - Impassable
-    - BulletImpassable
+      - Impassable
+      - BulletImpassable
     - type: Projectile
       damage:
         types:
