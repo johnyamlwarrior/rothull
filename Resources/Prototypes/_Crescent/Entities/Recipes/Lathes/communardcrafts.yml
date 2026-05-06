@@ -612,7 +612,7 @@
 
 - type: latheRecipe
   id: ZaryiaFlashbangHandgrenade
-  result: NCWL Zaryia-4M Flashbang
+  result: ZaryiaFlashbangHandgrenade
   completetime: 2
   materials:
    Plastic: 100
