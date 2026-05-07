@@ -115,8 +115,6 @@
   - type: Currency
     price:
       PlunderGSC: 10
-  - type: Sprite
-    layers:
   - type: PresetIdCard
     job: PartisanNCWL
 
