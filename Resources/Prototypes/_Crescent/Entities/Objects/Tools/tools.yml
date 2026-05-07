@@ -941,7 +941,6 @@
           path: /Audio/Items/wirecutter.ogg
         changeSound:
           path: /Audio/SimpleStation14/Items/Handling/disk_pickup.ogg
-        speedModifer: 1
       - behavior: Slicing
         sprite:
           sprite: _Crescent/Objects/Tools/New_Tools/handyman.rsi
@@ -1120,7 +1119,6 @@
           state: jawsoflife-cutter
         useSound: /Audio/Items/jaws_cut.ogg
         changeSound: /Audio/Items/change_jaws.ogg
-        speedModifier: 5
   - type: MeleeWeapon
     wideAnimationRotation: 90
     attackRate: 1
