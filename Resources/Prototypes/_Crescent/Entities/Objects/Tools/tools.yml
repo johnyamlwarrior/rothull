@@ -949,7 +949,6 @@
           path: /Audio/Items/wirecutter.ogg
         changeSound:
           path: /Audio/SimpleStation14/Items/Handling/disk_pickup.ogg
-        speedModifer: 1
 #Other
 - type: entity
   name: SHI-UF Shovel
