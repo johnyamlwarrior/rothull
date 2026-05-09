@@ -271,7 +271,7 @@ namespace Content.Client.Stylesheets
             invSlotBg.SetPatchMargin(StyleBox.Margin.All, 2);
             invSlotBg.SetContentMarginOverride(StyleBox.Margin.All, 0);
 
-            var handSlotHighlightTex = resCache.GetTexture("/Textures/Interface/Inventory/hand_slot_highlighthullrot.png");
+            var handSlotHighlightTex = resCache.GetTexture("/Textures/Interface/Inventory/hand_slot_highlight.png");
             var handSlotHighlight = new StyleBoxTexture
             {
                 Texture = handSlotHighlightTex,
