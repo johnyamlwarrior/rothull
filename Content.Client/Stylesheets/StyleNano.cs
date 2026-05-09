@@ -100,12 +100,12 @@ namespace Content.Client.Stylesheets
         public static readonly Color DangerousRedFore = Color.FromHex("#BB3232");
         public static readonly Color DisabledFore = Color.FromHex("#5A5A5A");
 
-        public static readonly Color ButtonColorDefault = Color.FromHex("#464950");
+        public static readonly Color ButtonColorDefault = Color.FromHex("#2B2520");
         public static readonly Color ButtonColorDefaultRed = Color.FromHex("#D43B3B");
-        public static readonly Color ButtonColorHovered = Color.FromHex("#575b61");
+        public static readonly Color ButtonColorHovered = Color.FromHex("#4A3828");
         public static readonly Color ButtonColorHoveredRed = Color.FromHex("#DF6B6B");
-        public static readonly Color ButtonColorPressed = Color.FromHex("#3e6c45");
-        public static readonly Color ButtonColorDisabled = Color.FromHex("#292929");
+        public static readonly Color ButtonColorPressed = Color.FromHex("#3d1418");
+        public static readonly Color ButtonColorDisabled = Color.FromHex("#1A1715");
 
         public static readonly Color ButtonColorCautionDefault = Color.FromHex("#8F6A33");
         public static readonly Color ButtonColorCautionHovered = Color.FromHex("#C0934E");
@@ -160,7 +160,7 @@ namespace Content.Client.Stylesheets
         public const string StyleClassButtonColorRed = "ButtonColorRed";
         public const string StyleClassButtonColorGreen = "ButtonColorGreen";
 
-        public static readonly Color ChatBackgroundColor = Color.FromHex("#25252ADD");
+        public static readonly Color ChatBackgroundColor = Color.FromHex("#120A0AE6");
 
         // DeltaV - AAC button variables
         public static readonly string CommandButtonClass = "CommandButton";
@@ -195,6 +195,10 @@ namespace Content.Client.Stylesheets
         public const string StyleClassPinButtonPinned = "pinButtonPinned";
         public const string StyleClassPinButtonUnpinned = "pinButtonUnpinned";
 
+        //mylobbystuff
+        public const string StyleClassHullrotFormRow = "HullrotFormRow";
+        public const string StyleClassHullrotFormRowAlt = "HullrotFormRowAlt";
+        public const string StyleClassHullrotToolbar = "HullrotToolbar";
 
         public override Stylesheet Stylesheet { get; }
 
@@ -262,14 +266,16 @@ namespace Content.Client.Stylesheets
             var invSlotBg = new StyleBoxTexture
             {
                 Texture = invSlotBgTex,
+                Modulate = Color.FromHex("#120A0A")
             };
             invSlotBg.SetPatchMargin(StyleBox.Margin.All, 2);
             invSlotBg.SetContentMarginOverride(StyleBox.Margin.All, 0);
 
-            var handSlotHighlightTex = resCache.GetTexture("/Textures/Interface/Inventory/hand_slot_highlight.png");
+            var handSlotHighlightTex = resCache.GetTexture("/Textures/Interface/Inventory/hand_slot_highlighthullrot.png");
             var handSlotHighlight = new StyleBoxTexture
             {
                 Texture = handSlotHighlightTex,
+                Modulate = Color.FromHex("#A88B5E")
             };
             handSlotHighlight.SetPatchMargin(StyleBox.Margin.All, 2);
 
@@ -283,11 +289,15 @@ namespace Content.Client.Stylesheets
             var hotbarBackground = new StyleBoxTexture
             {
                 Texture = borderedWindowBackgroundTex,
+                Modulate = Color.FromHex("#120A0AE6"),
             };
             hotbarBackground.SetPatchMargin(StyleBox.Margin.All, 2);
             hotbarBackground.SetExpandMargin(StyleBox.Margin.All, 4);
 
-            var buttonStorage = new StyleBoxTexture(BaseButton);
+            var buttonStorage = new StyleBoxTexture(BaseButton)
+            {
+                Modulate = Color.FromHex("#2B2520"),
+            };
             buttonStorage.SetPatchMargin(StyleBox.Margin.All, 10);
             buttonStorage.SetPadding(StyleBox.Margin.All, 0);
             buttonStorage.SetContentMarginOverride(StyleBox.Margin.Vertical, 0);
@@ -404,14 +414,20 @@ namespace Content.Client.Stylesheets
 
             var chatBg = new StyleBoxFlat
             {
-                BackgroundColor = ChatBackgroundColor
+                BackgroundColor = Color.FromHex("#120A0AE6"),
+                BorderColor = NanoGold,
+                BorderThickness = new Thickness(1),
             };
+
+            chatBg.SetContentMarginOverride(StyleBox.Margin.All, 4);
 
             var chatSubBg = new StyleBoxFlat
             {
-                BackgroundColor = ChatBackgroundColor,
+                BackgroundColor = Color.FromHex("#1C1010E6"),
+                BorderColor = Color.FromHex("#5A4524"),
+                BorderThickness = new Thickness(1),
             };
-            chatSubBg.SetContentMarginOverride(StyleBox.Margin.All, 2);
+            chatSubBg.SetContentMarginOverride(StyleBox.Margin.All, 3);
 
             var actionSearchBoxTex = resCache.GetTexture("/Textures/Interface/Nano/black_panel_dark_thin_border.png");
             var actionSearchBox = new StyleBoxTexture
@@ -435,13 +451,16 @@ namespace Content.Client.Stylesheets
 
             var progressBarBackground = new StyleBoxFlat
             {
-                BackgroundColor = new Color(0.25f, 0.25f, 0.25f)
+                BackgroundColor = Color.FromHex("#120A0AE6"),
+                BorderColor = Color.FromHex("#A88B5E"),
+                BorderThickness = new Thickness(1),
             };
+
             progressBarBackground.SetContentMarginOverride(StyleBox.Margin.Vertical, 14.5f);
 
             var progressBarForeground = new StyleBoxFlat
             {
-                BackgroundColor = new Color(0.25f, 0.50f, 0.25f)
+                BackgroundColor = Color.FromHex("#A88B5E"),
             };
             progressBarForeground.SetContentMarginOverride(StyleBox.Margin.Vertical, 14.5f);
 
@@ -515,7 +534,8 @@ namespace Content.Client.Stylesheets
             var stripeBack = new StyleBoxTexture
             {
                 Texture = stripeBackTex,
-                Mode = StyleBoxTexture.StretchMode.Tile
+                Mode = StyleBoxTexture.StretchMode.Tile,
+                Modulate = Color.FromHex("#A88B5E")
             };
 
             // Slider
@@ -526,7 +546,7 @@ namespace Content.Client.Stylesheets
             var sliderFillBox = new StyleBoxTexture
             {
                 Texture = sliderFillTex,
-                Modulate = Color.FromHex("#3E6C45")
+                Modulate = Color.FromHex("#5A1C1C")
             };
 
             var sliderBackBox = new StyleBoxTexture
@@ -538,7 +558,7 @@ namespace Content.Client.Stylesheets
             var sliderForeBox = new StyleBoxTexture
             {
                 Texture = sliderOutlineTex,
-                Modulate = Color.FromHex("#494949")
+                Modulate = Color.FromHex("#A88B5E")
             };
 
             var sliderGrabBox = new StyleBoxTexture
@@ -608,45 +628,138 @@ namespace Content.Client.Stylesheets
                     {
                         new StyleProperty(PanelContainer.StylePropertyPanel, windowBackground),
                     }),
+                //mylobbystuffs
+                Element<PanelContainer>().Class(StyleClassHullrotFormRow)
+                    .Prop(PanelContainer.StylePropertyPanel, new StyleBoxFlat
+                    {
+                        BackgroundColor = Color.FromHex("#120A0AE6"),
+                        ContentMarginLeftOverride = 2,
+                        ContentMarginRightOverride = 2,
+                        ContentMarginTopOverride = 1,
+                        ContentMarginBottomOverride = 1,
+                    }),
+
+                Element<PanelContainer>().Class(StyleClassHullrotFormRowAlt)
+                    .Prop(PanelContainer.StylePropertyPanel, new StyleBoxFlat
+                    {
+                        BackgroundColor = Color.FromHex("#1C1010E6"),
+                        ContentMarginLeftOverride = 2,
+                        ContentMarginRightOverride = 2,
+                        ContentMarginTopOverride = 1,
+                        ContentMarginBottomOverride = 1,
+                    }),
+                Element<PanelContainer>().Class(StyleClassHullrotToolbar)
+                    .Prop(PanelContainer.StylePropertyPanel, new StyleBoxFlat
+                    {
+                        BackgroundColor = Color.FromHex("#120A0AF2"),
+                        BorderColor = Color.FromHex("#A88B5E"),
+                        BorderThickness = new Thickness(0, 0, 0, 1),
+
+                        ContentMarginLeftOverride = 4,
+                        ContentMarginRightOverride = 4,
+                        ContentMarginTopOverride = 4,
+                        ContentMarginBottomOverride = 4,
+                    }),
                 // bordered window background
                 new StyleRule(
                     new SelectorElement(null, new[] {StyleClassBorderedWindowPanel}, null, null),
                     new[]
                     {
-                        new StyleProperty(PanelContainer.StylePropertyPanel, borderedWindowBackground),
+                        new StyleProperty(PanelContainer.StylePropertyPanel,
+                            new StyleBoxFlat
+                            {
+                                BackgroundColor = Color.FromHex("#120A0AE6"),
+                                BorderColor = Color.FromHex("#A88B5E"),
+                                BorderThickness = new Thickness(2),
+                                ContentMarginLeftOverride = 4,
+                                ContentMarginRightOverride = 4,
+                                ContentMarginTopOverride = 4,
+                                ContentMarginBottomOverride = 4,
+                            }),
                     }),
                 new StyleRule(
                     new SelectorElement(null, new[] {StyleClassTransparentBorderedWindowPanel}, null, null),
                     new[]
                     {
-                        new StyleProperty(PanelContainer.StylePropertyPanel, borderedTransparentWindowBackground),
+                        new StyleProperty(PanelContainer.StylePropertyPanel,
+                            new StyleBoxFlat
+                            {
+                                BackgroundColor = Color.FromHex("#120A0AAA"),
+                                BorderColor = Color.FromHex("#7A6135"),
+                                BorderThickness = new Thickness(2),
+                                ContentMarginLeftOverride = 4,
+                                ContentMarginRightOverride = 4,
+                                ContentMarginTopOverride = 4,
+                                ContentMarginBottomOverride = 4,
+                            }),
                     }),
                 // inventory slot background
                 new StyleRule(
                     new SelectorElement(null, new[] {StyleClassInventorySlotBackground}, null, null),
                     new[]
                     {
-                        new StyleProperty(PanelContainer.StylePropertyPanel, invSlotBg),
+                        new StyleProperty(PanelContainer.StylePropertyPanel,
+                            new StyleBoxFlat
+                            {
+                                BackgroundColor = Color.FromHex("#1A1010"),
+                                BorderColor = Color.FromHex("#5A4524"),
+                                BorderThickness = new Thickness(1),
+                                ContentMarginLeftOverride = 2,
+                                ContentMarginRightOverride = 2,
+                                ContentMarginTopOverride = 2,
+                                ContentMarginBottomOverride = 2,
+                            }),
                     }),
                 // hand slot highlight
                 new StyleRule(
                     new SelectorElement(null, new[] {StyleClassHandSlotHighlight}, null, null),
                     new[]
                     {
-                        new StyleProperty(PanelContainer.StylePropertyPanel, handSlotHighlight),
+                        new StyleProperty(PanelContainer.StylePropertyPanel,
+                            new StyleBoxFlat
+                            {
+                                BackgroundColor = Color.FromHex("#2A1A12"),
+                                BorderColor = Color.FromHex("#D6B36A"),
+                                BorderThickness = new Thickness(2),
+                                ContentMarginLeftOverride = 2,
+                                ContentMarginRightOverride = 2,
+                                ContentMarginTopOverride = 2,
+                                ContentMarginBottomOverride = 2,
+                            }),
                     }),
                 // Hotbar background
-                new StyleRule(new SelectorElement(typeof(PanelContainer), new[] {StyleClassHotbarPanel}, null, null),
+                new StyleRule(
+                    new SelectorElement(typeof(PanelContainer), new[] {StyleClassHotbarPanel}, null, null),
                     new[]
                     {
-                        new StyleProperty(PanelContainer.StylePropertyPanel, hotbarBackground),
+                        new StyleProperty(PanelContainer.StylePropertyPanel,
+                            new StyleBoxFlat
+                            {
+                                BackgroundColor = Color.FromHex("#120A0AE6"),
+                                BorderColor = Color.FromHex("#7A6135"),
+                                BorderThickness = new Thickness(2),
+                                ContentMarginLeftOverride = 4,
+                                ContentMarginRightOverride = 4,
+                                ContentMarginTopOverride = 4,
+                                ContentMarginBottomOverride = 4,
+                            }),
                     }),
-                // Window header.
+                // Window header
                 new StyleRule(
                     new SelectorElement(typeof(PanelContainer), new[] {DefaultWindow.StyleClassWindowHeader}, null, null),
                     new[]
                     {
-                        new StyleProperty(PanelContainer.StylePropertyPanel, windowHeader),
+                        new StyleProperty(PanelContainer.StylePropertyPanel,
+                            new StyleBoxFlat
+                            {
+                                BackgroundColor = Color.FromHex("#241515"),
+                                BorderColor = Color.FromHex("#A88B5E"),
+                                BorderThickness = new Thickness(0, 0, 0, 2),
+                                ContentMarginLeftOverride = 6,
+                                ContentMarginRightOverride = 6,
+                                ContentMarginTopOverride = 4,
+                                ContentMarginBottomOverride = 4,
+                            }),
                     }),
                 // Alert (red) window header.
                 new StyleRule(
@@ -852,23 +965,20 @@ namespace Content.Client.Stylesheets
 
                 // Thin buttons (No padding nor vertical margin)
                 Element<ContainerButton>().Class(StyleClassStorageButton)
-                    .Prop(ContainerButton.StylePropertyStyleBox, buttonStorage),
-
-                Element<ContainerButton>().Class(StyleClassStorageButton)
                     .Pseudo(ContainerButton.StylePseudoClassNormal)
-                    .Prop(Control.StylePropertyModulateSelf, ButtonColorDefault),
+                    .Prop(Control.StylePropertyModulateSelf, Color.FromHex("#2B2520")),
 
                 Element<ContainerButton>().Class(StyleClassStorageButton)
                     .Pseudo(ContainerButton.StylePseudoClassHover)
-                    .Prop(Control.StylePropertyModulateSelf, ButtonColorHovered),
+                    .Prop(Control.StylePropertyModulateSelf, Color.FromHex("#4A3828")),
 
                 Element<ContainerButton>().Class(StyleClassStorageButton)
                     .Pseudo(ContainerButton.StylePseudoClassPressed)
-                    .Prop(Control.StylePropertyModulateSelf, ButtonColorPressed),
+                    .Prop(Control.StylePropertyModulateSelf, Color.FromHex("#3D1418")),
 
                 Element<ContainerButton>().Class(StyleClassStorageButton)
                     .Pseudo(ContainerButton.StylePseudoClassDisabled)
-                    .Prop(Control.StylePropertyModulateSelf, ButtonColorDisabled),
+                    .Prop(Control.StylePropertyModulateSelf, Color.FromHex("#1A1715")),
 // ListContainer
                 Element<ContainerButton>().Class(ListContainer.StyleClassListContainerButton)
                     .Prop(ContainerButton.StylePropertyStyleBox, listContainerButton),
@@ -1200,7 +1310,7 @@ namespace Content.Client.Stylesheets
                  // Console text
                 new StyleRule(new SelectorElement(typeof(Label), new[] {StyleClassConsoleText}, null, null), new[]
                 {
-                    new StyleProperty(Label.StylePropertyFont, robotoMonoBold11)
+                    new StyleProperty(Label.StylePropertyFont, boxFont13)
                 }),
 
                 new StyleRule(new SelectorElement(typeof(Label), new[] {StyleClassConsoleSubHeading}, null, null), new[]
@@ -1508,11 +1618,11 @@ namespace Content.Client.Stylesheets
                 //The lengths you have to go through to change a background color smh
                 Element<PanelContainer>().Class("PanelBackgroundBaseDark")
                     .Prop("panel", new StyleBoxTexture(BaseButtonOpenBoth) { Padding = default })
-                    .Prop(Control.StylePropertyModulateSelf, Color.FromHex("#1F1F23")),
+                    .Prop(Control.StylePropertyModulateSelf, Color.FromHex("#120B0BCC")),
 
                 Element<PanelContainer>().Class("PanelBackgroundLight")
                     .Prop("panel", new StyleBoxTexture(BaseButtonOpenBoth) { Padding = default })
-                    .Prop(Control.StylePropertyModulateSelf, Color.FromHex("#2F2F3B")),
+                    .Prop(Control.StylePropertyModulateSelf, Color.FromHex("#241515CC")),
 
                 // Window Footer
                 Element<TextureRect>().Class("NTLogoDark")
@@ -1653,7 +1763,7 @@ namespace Content.Client.Stylesheets
                     .Prop(PanelContainer.StylePropertyPanel, AngleBorderRect),
 
                 Element<PanelContainer>().Class("BackgroundDark")
-                    .Prop(PanelContainer.StylePropertyPanel, new StyleBoxFlat(Color.FromHex("#252525"))),
+                    .Prop(PanelContainer.StylePropertyPanel, new StyleBoxFlat(Color.FromHex("#100A0ACC"))),
 
                 //PDA - Buttons
                 Element<PdaSettingsButton>().Pseudo(ContainerButton.StylePseudoClassNormal)
@@ -1872,6 +1982,7 @@ namespace Content.Client.Stylesheets
                     .Pseudo(TextureButton.StylePseudoClassHover)
                     .Prop(TextureButton.StylePropertyTexture, resCache.GetTexture("/Textures/_Shitmed/Interface/Targeting/Doll/mouth_hover.png")),
                 // Shitmed Change End
+
 
             }).ToList());
         }

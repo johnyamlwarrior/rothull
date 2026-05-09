@@ -126,31 +126,53 @@ namespace Content.Client.Stylesheets
 
             var vScrollBarGrabberNormal = new StyleBoxFlat
             {
-                BackgroundColor = Color.Gray.WithAlpha(0.35f), ContentMarginLeftOverride = DefaultGrabberSize,
+                BackgroundColor = Color.FromHex("#5A4524").WithAlpha(0.75f),
+                BorderColor = Color.FromHex("#A88B5E"),
+                BorderThickness = new Thickness(1),
+                ContentMarginLeftOverride = DefaultGrabberSize,
                 ContentMarginTopOverride = DefaultGrabberSize
             };
+
             var vScrollBarGrabberHover = new StyleBoxFlat
             {
-                BackgroundColor = new Color(140, 140, 140).WithAlpha(0.35f), ContentMarginLeftOverride = DefaultGrabberSize,
+                BackgroundColor = Color.FromHex("#7A6135").WithAlpha(0.85f),
+                BorderColor = Color.FromHex("#D6B36A"),
+                BorderThickness = new Thickness(1),
+                ContentMarginLeftOverride = DefaultGrabberSize,
                 ContentMarginTopOverride = DefaultGrabberSize
             };
+
             var vScrollBarGrabberGrabbed = new StyleBoxFlat
             {
-                BackgroundColor = new Color(160, 160, 160).WithAlpha(0.35f), ContentMarginLeftOverride = DefaultGrabberSize,
+                BackgroundColor = Color.FromHex("#A88B5E").WithAlpha(0.95f),
+                BorderColor = Color.FromHex("#F0D28A"),
+                BorderThickness = new Thickness(1),
+                ContentMarginLeftOverride = DefaultGrabberSize,
                 ContentMarginTopOverride = DefaultGrabberSize
             };
 
             var hScrollBarGrabberNormal = new StyleBoxFlat
             {
-                BackgroundColor = Color.Gray.WithAlpha(0.35f), ContentMarginTopOverride = DefaultGrabberSize
+                BackgroundColor = Color.FromHex("#5A4524").WithAlpha(0.75f),
+                BorderColor = Color.FromHex("#A88B5E"),
+                BorderThickness = new Thickness(1),
+                ContentMarginTopOverride = DefaultGrabberSize
             };
+
             var hScrollBarGrabberHover = new StyleBoxFlat
             {
-                BackgroundColor = new Color(140, 140, 140).WithAlpha(0.35f), ContentMarginTopOverride = DefaultGrabberSize
+                BackgroundColor = Color.FromHex("#7A6135").WithAlpha(0.85f),
+                BorderColor = Color.FromHex("#D6B36A"),
+                BorderThickness = new Thickness(1),
+                ContentMarginTopOverride = DefaultGrabberSize
             };
+
             var hScrollBarGrabberGrabbed = new StyleBoxFlat
             {
-                BackgroundColor = new Color(160, 160, 160).WithAlpha(0.35f), ContentMarginTopOverride = DefaultGrabberSize
+                BackgroundColor = Color.FromHex("#A88B5E").WithAlpha(0.95f),
+                BorderColor = Color.FromHex("#F0D28A"),
+                BorderThickness = new Thickness(1),
+                ContentMarginTopOverride = DefaultGrabberSize
             };
 
 
