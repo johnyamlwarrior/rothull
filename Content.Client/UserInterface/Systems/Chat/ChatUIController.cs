@@ -286,7 +286,9 @@ public sealed class ChatUIController : UIController
 
         panel.PanelOverride = new StyleBoxFlat
         {
-            BackgroundColor = color.WithAlpha(opacity)
+            BackgroundColor = color.WithAlpha(opacity),
+            BorderColor = Color.FromHex("#7A6135"),
+            BorderThickness = new Thickness(2),
         };
     }
 
