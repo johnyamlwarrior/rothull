@@ -1023,8 +1023,24 @@ namespace Content.Client.Lobby.UI
 
                 foreach (var job in jobs)
                 {
-                    var jobContainer = new BoxContainer { Orientation = LayoutOrientation.Horizontal, HorizontalExpand = true, };
-                    var selector = new RequirementsSelector { Margin = new(3f, 3f, 3f, 0f), HorizontalExpand = true, };
+                    var jobContainer = new PanelContainer
+                    {
+                        StyleClasses = { StyleNano.StyleClassHullrotFormRow },
+                        HorizontalExpand = true,
+                    };
+
+                    var jobRow = new BoxContainer
+                    {
+                        Orientation = LayoutOrientation.Horizontal,
+                        HorizontalExpand = true,
+                        Margin = new Thickness(4, 2),
+                    };
+
+                    var selector = new RequirementsSelector
+                    {
+                        Margin = new(0f, 0f, 0f, 0f),
+                        HorizontalExpand = true,
+                    };
                     selector.OnOpenGuidebook += OnOpenGuidebook;
 
                     var icon = new TextureRect
@@ -1079,7 +1095,8 @@ namespace Content.Client.Lobby.UI
                     };
 
                     _jobPriorities.Add((job.ID, selector));
-                    jobContainer.AddChild(selector);
+                    jobRow.AddChild(selector);
+                    jobContainer.AddChild(jobRow);
                     category.AddChild(jobContainer);
                 }
             }
