@@ -42,7 +42,7 @@ chatsan-crescent-word-26 = paki
 
 chatsan-crescent-word-27 = rape
 chatsan-crescent-replacement-27 = love
-chatsan-crescent-word-28 = nigga
+# chatsan-crescent-word-28 = nigga
 chatsan-crescent-word-29 = niggas
 chatsan-crescent-word-30 = niggaz
 chatsan-crescent-word-31 = retard
