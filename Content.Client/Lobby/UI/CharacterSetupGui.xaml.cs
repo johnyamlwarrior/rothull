@@ -11,6 +11,9 @@ using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Prototypes;
+using System.Numerics;
+using Content.AL.UIKit.Styleboxes;
+using Content.Client.Stylesheets;
 
 namespace Content.Client.Lobby.UI
 {
@@ -52,11 +55,12 @@ namespace Content.Client.Lobby.UI
             };
             back.SetPatchMargin(StyleBox.Margin.All, 10);
 
-            BackgroundPanel.PanelOverride = back;
+            BackgroundPanel.PanelOverride = HullrotPanel();
 
             _createNewCharacterButton = new Button
             {
                 Text = Loc.GetString("character-setup-gui-create-new-character-button"),
+                StyleClasses = { StyleNano.StyleClassButtonBig },
             };
 
             _createNewCharacterButton.OnPressed += args =>
@@ -77,6 +81,25 @@ namespace Content.Client.Lobby.UI
             CharEditor.RemoveAllChildren();
             _humanoidProfileEditor.Profile = FactionSelector.Profile;
             CharEditor.AddChild(_humanoidProfileEditor);
+        }
+        private static StyleboxExtruded HullrotPanel()
+        {
+            var baseBox = new StyleBoxFlat
+            {
+                BackgroundColor = Color.FromHex("#0D0D0DF8"),
+                BorderColor = Color.FromHex("#D6B36A"),
+                BorderThickness = new Thickness(2),
+                ContentMarginLeftOverride = 8,
+                ContentMarginRightOverride = 8,
+                ContentMarginTopOverride = 8,
+                ContentMarginBottomOverride = 8,
+            };
+
+            return new StyleboxExtruded(
+                baseBox,
+                new Vector2(4, 4),
+                modulate: Color.FromHex("#050505AA")
+            );
         }
 
 
@@ -146,4 +169,5 @@ namespace Content.Client.Lobby.UI
             Characters.AddChild(_createNewCharacterButton);
         }
     }
+
 }
