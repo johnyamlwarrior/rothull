@@ -20,7 +20,7 @@
       chance: 0.20
       rarePrototypes: #powerful or decent things that will keep salvagers mining for dopamine
       #  - WeaponRifleHalyadMarksman
-      #  - WeaponSubMachineGunGhost
+       - WeaponSubMachineGunGhost
       #  - WeaponRifleVintorez
       #  - WeaponRifleTakemura
       #  - WeaponSubMachineGunPTAAsVal
