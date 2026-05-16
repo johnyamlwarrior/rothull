@@ -2,7 +2,7 @@
   name: Karambit Case Hardened | Blue Gem
   parent: [BaseItem, StreeCredRedeemableHigh]
   id: KarambitBlueGem
-  description: Minimal wear 0.045370630 Fade Pattern 387. Remember you always run faster with your knife out.
+  description: Factory new 0.045370630 Fade Pattern 387. Remember you always run faster with your knife out.
   components:
   - type: Sharp
   - type: Sprite
