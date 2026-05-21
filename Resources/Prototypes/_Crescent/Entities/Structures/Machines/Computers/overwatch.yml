@@ -240,6 +240,135 @@
   #     state: tsp
 
 - type: entity
+  parent: [BaseStructureComputerTabletop, BaseComputerOverwatch]
+  id: C_ComputerTabletopOverwatch
+  name: overwatch computer
+  components:
+    - type: Sprite
+      drawdepth: SmallObjects
+      layers:
+      - map: ["computerLayerBody"]
+        sprite: _NF/Structures/Machines/computer_tabletop.rsi
+        state: computer_tabletop
+      - map: ["computerLayerKeyboard"]
+        sprite: _NF/Structures/Machines/computer_tabletop.rsi
+        state: generic_keyboard_tabletop
+      - map: ["computerLayerScreen"]
+        sprite: Structures/Machines/computers.rsi
+        state: generic
+      - map: ["computerLayerKeys"]
+        sprite: Structures/Machines/computers.rsi
+        state: generic_keys
+
+- type: entity
+  parent: C_ComputerTabletopOverwatch
+  id: DSMOverwatchComputerTabletop
+  name: overwatch console DSM
+  components:
+  - type: OverwatchConsole
+    faction: DSM
+  # - type: Sprite
+  #   layers:
+  #   - map: ["computerLayerScreen"]
+  #     state: dsm
+
+- type: entity
+  parent: C_ComputerTabletopOverwatch
+  id: NCWLOverwatchComputerTabletop
+  name: overwatch console NCWL
+  components:
+  - type: OverwatchConsole
+    faction: NCWL
+  # - type: Sprite
+  #   layers:
+  #   - map: ["computerLayerScreen"]
+  #     state: ncwl
+
+- type: entity
+  parent: C_ComputerTabletopOverwatch
+  id: SHIOverwatchComputerTabletop
+  name: overwatch console SHI
+  components:
+  - type: OverwatchConsole
+    faction: SHI
+  # - type: Sprite
+  #   layers:
+  #   - map: ["computerLayerScreen"]
+  #     state: shi
+
+- type: entity
+  parent: C_ComputerTabletopOverwatch
+  id: TAPOverwatchComputerTabletop
+  name: overwatch console TAP
+  components:
+  - type: OverwatchConsole
+    faction: TAP
+  # - type: Sprite
+  #   layers:
+  #   - map: ["computerLayerScreen"]
+  #     state: tap
+
+- type: entity
+  parent: C_ComputerTabletopOverwatch
+  id: IPMOverwatchComputerTabletop
+  name: overwatch console IPM
+  components:
+  - type: OverwatchConsole
+    faction: IPM
+  # - type: Sprite
+  #   layers:
+  #   - map: ["computerLayerScreen"]
+  #     state: tsp
+
+- type: entity
+  parent: C_ComputerTabletopOverwatch
+  id: SAWOverwatchComputerTabletop
+  name: overwatch console SAW
+  components:
+  - type: OverwatchConsole
+    faction: SAW
+  # - type: Sprite
+  #   layers:
+  #   - map: ["computerLayerScreen"]
+  #     state: tsp
+
+- type: entity
+  parent: C_ComputerTabletopOverwatch
+  id: GSCOverwatchComputerTabletop
+  name: overwatch console GSC
+  components:
+  - type: OverwatchConsole
+    faction: GSC
+  # - type: Sprite
+  #   layers:
+  #   - map: ["computerLayerScreen"]
+  #     state: tsp
+
+- type: entity
+  parent: C_ComputerTabletopOverwatch
+  id: CDOverwatchComputerTabletop
+  name: overwatch console CD
+  components:
+  - type: OverwatchConsole
+    faction: CD
+  # - type: Sprite
+  #   layers:
+  #   - map: ["computerLayerScreen"]
+  #     state: tsp
+
+- type: entity
+  parent: C_ComputerTabletopOverwatch
+  id: SRMOverwatchComputerTabletop
+  name: overwatch console SRM
+  components:
+  - type: OverwatchConsole
+    faction: SRM
+  # - type: Sprite
+  #   layers:
+  #   - map: ["computerLayerScreen"]
+  #     state: tsp
+
+- type: entity
   parent: BoxFolderBase
   abstract: true
   id: BaseOverwatchClipboard

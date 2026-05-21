@@ -83,6 +83,27 @@ ent-CDOverwatchComputer = overwatch console «DARK WEB» (CD)
 ent-SRMOverwatchComputer = overwatch console «HUNTER EYES»
     .desc = The «HUNTER EYES» surveillance system console. Allows monitoring of faction members and squad coordination.
 
+ent-C_ComputerTabletopOverwatch = overwatch console
+    .desc = A computer terminal used to monitor faction members through wearable cameras.
+ent-DSMOverwatchComputerTabletop = overwatch console «KAISER'S EYE»
+    .desc = The «KAISER'S EYE» surveillance system console. Allows monitoring of faction members and squad coordination.
+ent-NCWLOverwatchComputerTabletop = overwatch console «WATCHMAN»
+    .desc = The «WATCHMAN» surveillance system console. Allows monitoring of faction members and squad coordination.
+ent-SHIOverwatchComputerTabletop = overwatch console «SATORI»
+    .desc = The «SATORI» surveillance system console. Allows monitoring of faction members and squad coordination.
+ent-TAPOverwatchComputerTabletop = overwatch console «ECHO»
+    .desc = The «ECHO» surveillance system console. Allows monitoring of faction members and squad coordination.
+ent-IPMOverwatchComputerTabletop = overwatch console «DARK WEB» (IPM)
+    .desc = IPM's «DARK WEB» surveillance system console. Allows monitoring of faction members and squad coordination.
+ent-SAWOverwatchComputerTabletop = overwatch console «DARK WEB» (SAW)
+    .desc = SAW's «DARK WEB» surveillance system console. Allows monitoring of faction members and squad coordination.
+ent-GSCOverwatchComputerTabletop = overwatch console «DARK WEB» (GSC)
+    .desc = GSC's «DARK WEB» surveillance system console. Allows monitoring of faction members and squad coordination.
+ent-CDOverwatchComputerTabletop = overwatch console «DARK WEB» (CD)
+    .desc = CD's «DARK WEB» surveillance system console. Allows monitoring of faction members and squad coordination.
+ent-SRMOverwatchComputerTabletop = overwatch console «HUNTER EYES»
+    .desc = The «HUNTER EYES» surveillance system console. Allows monitoring of faction members and squad coordination.
+
 ent-BaseOverwatchClipboard = Overwatch digital tablet
     .desc = A bulky digital tablet containing information on faction members. It should be carefully protected.
 ent-DSMOverwatchClipboard = Squad Overwatch Tablet «KAISER'S EYE»
