@@ -44297,7 +44297,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingShoesBootsMag
+- proto: ClothingShoesBootsMagCombat
   entities:
   - uid: 4074
     components:

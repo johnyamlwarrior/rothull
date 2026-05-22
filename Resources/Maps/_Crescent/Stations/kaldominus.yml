@@ -95515,7 +95515,7 @@ entities:
           priority: 0
           component: ClothingSpeedModifier
         title: null
-- proto: ClothingOuterHardsuitImperialSoldier
+- proto: ClothingOuterHardsuitImperialKnight
   entities:
   - uid: 379
     components:
@@ -96089,7 +96089,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingShoesBootsMag
+- proto: ClothingShoesBootsMagDSM
   entities:
   - uid: 9051
     components:
@@ -96179,6 +96179,20 @@ entities:
     components:
     - type: Transform
       parent: 9155
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
+  - uid: 9235
+    components:
+    - type: Transform
+      parent: 9233
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
+  - uid: 9242
+    components:
+    - type: Transform
+      parent: 9240
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
@@ -96314,22 +96328,6 @@ entities:
     components:
     - type: Transform
       parent: 536
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-- proto: ClothingShoesBootsMagEng
-  entities:
-  - uid: 9235
-    components:
-    - type: Transform
-      parent: 9233
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 9242
-    components:
-    - type: Transform
-      parent: 9240
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
