@@ -263,7 +263,7 @@
     faction: TFSC
   - type: ReverseEngineering # Sector Crescent
     recipes:
-      - ClothingOuterHardsuitTraumasec
+      # - ClothingOuterHardsuitTraumasec
 
 - type: entity
   parent: [ClothingOuterHardsuitBase, ClothingArmorInsertHardsuit]
@@ -307,8 +307,8 @@
   - type: ReverseEngineering # Sector Crescent
     difficulty: 3
     recipes:
-      - ClothingOuterHardsuitCoordinator
-      - ClothingOuterHardsuitTraumasec
+      # - ClothingOuterHardsuitCoordinator
+      # - ClothingOuterHardsuitTraumasec
 
 - type: entity
   parent: ClothingOuterHardsuitSyndicateBG
@@ -325,7 +325,7 @@
   - type: ReverseEngineering # Sector Crescent
     difficulty: 3
     recipes:
-      - ClothingOuterHardsuitSyndicateSellsword
+      # - ClothingOuterHardsuitSyndicateSellsword
       - ClothingOuterHardsuitSyndicateBG
 
 - type: entity
@@ -548,8 +548,8 @@
     faction: TFSC
   - type: ReverseEngineering # Sector Crescent
     recipes:
-      - ClothingOuterArmorSyndicateArmorvestInterdyne
-      - ClothingHeadHelmetSyndicateBasicInterdyne
+      # - ClothingOuterArmorSyndicateArmorvestInterdyne
+      # - ClothingHeadHelmetSyndicateBasicInterdyne
 
 - type: entity
   parent: [ClothingOuterStorageBase, ClothingOuterArmorBasic]
