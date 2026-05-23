@@ -613,7 +613,7 @@
       # - ClothingHeadHelmetSyndicateBasicInterdyne
       # - ClothingOuterArmorSyndicateArmorvestInterdyne
       # - ClothingBeltSyndicateWebbingInterdyne
-      - ClothingOuterHardsuitTraumasec
+      # - ClothingOuterHardsuitTraumasec
       # - ClothingOuterHardsuitCoordinator
       - ClothingUniformJumpsuitSyndicate #GSC clothing
       - ClothingUniformJumpsuitSyndicateOfficer
