@@ -290,14 +290,7 @@
 
 # MARK: Ship LPCs
 
-- type: latheRecipe
-  id: SunesisLPC
-  result: ShipVoucherSunesis
-  completetime: 1
-  materials:
-    StarshipEngineComponents: 4000
-    ShipComponents: 5000
-    ShipHull: 7500
+
 
 - type: latheRecipe
   id: PraxisLPC
