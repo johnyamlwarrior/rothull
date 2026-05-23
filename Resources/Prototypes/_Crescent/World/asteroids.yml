@@ -24,7 +24,7 @@
             prob: 0.01
             orGroup: rock
           - id: WallRockTin
-            prob: 0.08
+            prob: 0.2
             orGroup: rock
           - id: WallRockQuartz
             prob: 0.04
@@ -112,10 +112,10 @@
             prob: 0.005
             orGroup: rock
           - id: WallRockBasaltSilver
-            prob: 0.3
+            prob: 0.05
             orGroup: rock
           - id: WallRockBasaltGold
-            prob: 0.05
+            prob: 0.02
             orGroup: rock
           - id: WallRockBasaltTin
             prob: 0.1
@@ -177,7 +177,7 @@
       entries:
         FloorChromite:
           - id: WallRockChromite
-            prob: 0.4
+            prob: 0.5
             orGroup: rock
           - id: WallRockChromitePlasma
             prob: 0.06
@@ -186,7 +186,7 @@
             prob: 0.06
             orGroup: rock
           - id: WallRockChromiteGold
-            prob: 0.05
+            prob: 0.005
             orGroup: rock
           - id: WallRockChromiteUranium
             prob: 0.04
