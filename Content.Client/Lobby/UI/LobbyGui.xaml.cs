@@ -6,6 +6,8 @@ using Robust.Client.Console;
 using Robust.Client.State;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.XAML;
+using Robust.Client.Graphics;
+using Robust.Shared.Maths;
 
 namespace Content.Client.Lobby.UI
 {
@@ -17,6 +19,16 @@ namespace Content.Client.Lobby.UI
         public LobbyGui()
         {
             RobustXamlLoader.Load(this);
+            Chat.ChatWindowPanel.PanelOverride = new StyleBoxFlat
+            {
+                BackgroundColor = Color.FromHex("#000000F2"),
+                BorderColor = Color.FromHex("#A57A3A"),
+                BorderThickness = new Thickness(2),
+                ContentMarginLeftOverride = 6,
+                ContentMarginRightOverride = 6,
+                ContentMarginTopOverride = 6,
+                ContentMarginBottomOverride = 6,
+            };
             IoCManager.InjectDependencies(this);
             SetAnchorPreset(MainContainer, LayoutPreset.Wide);
             SetAnchorPreset(Background, LayoutPreset.Wide);
